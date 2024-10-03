@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Formulae</h1>
+
+    <script>
+      var a = parseInt(prompt("Enter a value"));
+      var b = parseInt(prompt("Enter b value"));
+      var a2 = Math.pow(a, 2);
+      var b2 = Math.pow(b, 2);
+      var ab = a * b;
+
+      var LhsAddition = a + b;
+      var LHS = Math.pow(LhsAddition, 2);
+
+      var RHS = a2 + 2 * ab + b2;
+
+      document.write(LHS === RHS);
+    </script>
+  </body>
+</html>
