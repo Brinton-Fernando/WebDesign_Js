@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var attendedClass = parseInt(prompt(`Enter number of class attended`));
+      var TotalClass = parseInt(prompt(`Enter total number of classes`));
+
+      var percentage = (attendedClass / TotalClass) * 100;
+
+      if (percentage < 75) {
+        document.write(
+          `Percentage is ${percentage}% - Student is not allowed to write the exam`
+        );
+      } else if (percentage >= 75 && percentage <= 100) {
+        document.write(
+          `Percentage is ${percentage}% - Student can allowed to write the exam`
+        );
+      } else document.write(`Enter your correct Percentage`);
+    </script>
+  </body>
+</html>
