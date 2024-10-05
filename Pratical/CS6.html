@@ -1,0 +1,22 @@
+<!-- Write a program to check whether the last digit of a number is divisible by 3 or not -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var number = parseInt(prompt("Enter any number"));
+      var lastDigit = number % 10;
+
+      if (lastDigit % 3 == 0) {
+        document.write(`Yes ${lastDigit} is divisible by 3`);
+      } else {
+        document.write(`No ${lastDigit} is not divisible by 3`);
+      }
+    </script>
+  </body>
+</html>
