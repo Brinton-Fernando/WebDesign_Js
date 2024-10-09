@@ -1,0 +1,42 @@
+<!-- Accept the marked price from the user and calculate the Net amount as (Marked Price - Discount Price) to pay according to following criteria -->
+<!-- >10000 20% -->
+<!-- >7000 and <=10000 15% -->
+<!-- <=7000 10% -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var totalAmount = parseInt(prompt("Enter the total amount"));
+
+      var highestDiscountPrice = (totalAmount * 20) / 100;
+      var mediumtDiscountPrice = (totalAmount * 15) / 100;
+      var lowestDiscountPrice = (totalAmount * 10) / 100;
+
+      if (totalAmount > 10000) {
+        document.write(
+          `20% offer applied Discounted amount ${highestDiscountPrice} and Amount to be paid ${
+            totalAmount - highestDiscountPrice
+          }`
+        );
+      } else if (totalAmount > 7000 && totalAmount <= 10000) {
+        document.write(
+          `15% offer applied Discounted amount ${mediumtDiscountPrice} and Amount to be paid ${
+            totalAmount - mediumtDiscountPrice
+          }`
+        );
+      } else if (totalAmount <= 7000) {
+        document.write(
+          `10% offer applied Discounted amount ${lowestDiscountPrice} and Amount to be paid ${
+            totalAmount - lowestDiscountPrice
+          }`
+        );
+      }
+    </script>
+  </body>
+</html>

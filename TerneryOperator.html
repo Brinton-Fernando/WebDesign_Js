@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var mark = parseInt(prompt("Enter your mark"));
+
+      var grade =
+        mark < 40
+          ? "Failed"
+          : mark >= 40 && mark <= 60
+          ? "C"
+          : mark > 60 && mark <= 70
+          ? "B"
+          : mark > 70 && mark <= 80
+          ? "A"
+          : mark <= 100
+          ? "O"
+          : "Invalid Mark";
+
+      document.write(`${grade}`);
+    </script>
+  </body>
+</html>

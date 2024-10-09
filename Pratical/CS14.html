@@ -1,0 +1,32 @@
+<!-- <40 Failed -->
+<!-- >=40 & <55 Fair -->
+<!-- >=55 & <65 Good -->
+<!-- >=65 Excellent -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var mark = parseInt(prompt("Enter your mark"));
+
+      var percentage = (mark / 100) * 100;
+
+      if (percentage < 40) {
+        document.write(`Your percentage is ${percentage} - Failed`);
+      } else if (percentage >= 40 && percentage < 55) {
+        document.write(`Your percentage is ${percentage} - Fair`);
+      } else if (percentage > 55 && percentage < 65) {
+        document.write(`Your percentage is ${percentage} - Good`);
+      } else if (percentage >= 65) {
+        document.write(`Your percentage is ${percentage} - Excellent`);
+      } else {
+        document.write("Enter your correct mark");
+      }
+    </script>
+  </body>
+</html>

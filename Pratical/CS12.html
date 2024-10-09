@@ -1,0 +1,37 @@
+<!-- More than 10 years 10% -->
+<!-- >=6 and <=10  8% -->
+<!-- Less than 6 years 5% -->
+<!-- ask user for their salary and years of service and print the net bonus amount -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var yearsOfExp = parseInt(prompt("Enter your years of experience"));
+      var salary = parseInt(prompt("Enter your salary"));
+
+      var bonusAmountMoreThan10Years = (salary * 10) / 100;
+      var bonusAmountMoreThan6Years = (salary * 8) / 100;
+      var bonusAmountLessThan6Years = (salary * 5) / 100;
+
+      if (yearsOfExp > 10) {
+        document.write(
+          `Bonus amount for your years of experience is ${bonusAmountMoreThan10Years}`
+        );
+      } else if (yearsOfExp >= 6 && yearsOfExp <= 10) {
+        document.write(
+          `Bonus amount for your years of experience is ${bonusAmountMoreThan6Years}`
+        );
+      } else if (yearsOfExp < 6) {
+        document.write(
+          `Bonus amount for your years of experience is ${bonusAmountLessThan6Years}`
+        );
+      }
+    </script>
+  </body>
+</html>

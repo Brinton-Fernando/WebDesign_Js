@@ -1,0 +1,28 @@
+<!-- Accept the age of 4 people and display the youngest one -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var age1 = parseInt(prompt("Enter User1 age"));
+      var age2 = parseInt(prompt("Enter User2 age"));
+      var age3 = parseInt(prompt("Enter User3 age"));
+      var age4 = parseInt(prompt("Enter User4 age"));
+
+      if (age1 > age2 && age1 > age3 && age1 > age4) {
+        document.write(`Youngest age is ${age1}`);
+      } else if (age2 > age1 && age2 > age3 && age2 > age4) {
+        document.write(`Youngest age is ${age2}`);
+      } else if (age3 > age1 && age3 > age2 && age3 > age4) {
+        document.write(`Youngest age is ${age3}`);
+      } else if (age4 > age1 && age4 > age2 && age4 > age3) {
+        document.write(`Youngest age is ${age4}`);
+      }
+    </script>
+  </body>
+</html>
