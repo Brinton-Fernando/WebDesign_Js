@@ -1,0 +1,37 @@
+<!-- Accept the number of days from the user and calculate the charge for library according to following -->
+<!-- Till 5 days = Rs.2/day -->
+<!-- 6 to 10 days = Rs.3/day -->
+<!-- 11 to 15 days = Rs.4/day -->
+<!-- After 15 days = Rs.5/day -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var days = parseInt(prompt("Enter the days"));
+
+      var for5Days = days * 2;
+      var for10Days = 10 + (days - 5) * 3;
+      var for15Days = 25 + (days - 10) * 4;
+      var forMoreThan15Days = 65 + (days - 15) * 5;
+
+      var amount =
+        days <= 5
+          ? `Amount should be paid for ${days} days is ${for5Days}`
+          : days > 5 && days <= 10
+          ? `Amount should be paid for ${days} days is ${for10Days}`
+          : days > 10 && days <= 15
+          ? `Amount should be paid for ${days} days is ${for15Days}`
+          : days > 15
+          ? `Amount should be paid for ${days} days is ${forMoreThan15Days}`
+          : "Invalid data";
+
+      document.write(amount);
+    </script>
+  </body>
+</html>
