@@ -1,0 +1,38 @@
+<!-- write a program to accept the cost price of a bike and display the road tax to be paid according to the following criteria
+>100000 - 15%
+>50000 and <=100000 - 10%
+<50000 - 5% -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var price = parseInt(prompt("Enter the price of bike"));
+      var tax15 = (15 / 100) * price;
+      var tax10 = (10 / 100) * price;
+      var tax5 = (5 / 100) * price;
+
+      var amount =
+        price > 100000
+          ? `${tax15} of Tax amount should be paid and the total payable amount is ${
+              tax15 + price
+            }`
+          : price >= 50000 && price <= 100000
+          ? `${tax10} of Tax amount should be paid and the total payable amount is ${
+              tax10 + price
+            }`
+          : price < 50000
+          ? `${tax5} of Tax amount should be paid and the total payable amount is ${
+              tax5 + price
+            }`
+          : "Enter correct price";
+
+      document.write(amount);
+    </script>
+  </body>
+</html>
