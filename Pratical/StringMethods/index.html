@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var firstName = 'Brinton';
+        var middleName = 'Fernando';
+        var lastName = 'G';
+        var fullName = firstName + middleName + lastName;
+        var age = "   My age is 29 my  ";
+        var mobile = "+91 7708199578";
+        var number = 1995;
+
+        var usingLength = fullName.length;
+        var usingCharcodeAt = fullName.charCodeAt(1);
+        var usingCharAt = fullName.charAt(0);
+        var usingAt = fullName.at(1);
+        var usingArray = firstName[2];
+        var usingSlice = fullName.slice(0,7);
+        var usingSubstring = fullName.substring(7, 15);
+        var usingSubstr = fullName.substr(15, 16);
+        var usingToUpperCase = fullName.toUpperCase();
+        var usingToLowerCase = fullName.toLowerCase();
+        var usingConcat = firstName.concat("",lastName, middleName);
+        var usingTrim = age.trim();
+        var usingTrimStart = age.trimStart();
+        var usingTrimEnd = age.trimEnd();
+        var usingPadStart = mobile.padStart(14, '+91 ');
+        var usingPadEnd = mobile.padEnd(14, ' +91');
+        var usingToString = number.toString();
+        var usingRepeat = mobile.repeat(2);
+        var usingReplace = mobile.replace(9, 0);
+        var usingIgnoreInReplace = mobile.replace(/9/i, 0);
+        var usingGlobalInReplace = mobile.replace(/9/g, 0);
+        var usingIgnoreAndGlobalInReplace = mobile.replace(/9/ig, 0);
+        var usingReplaceAll = age.replaceAll('My', 'Brinton');
+        var usingSplit = fullName.split('F');
+
+        console.log(`Using fullName.length method is "${usingLength}"`);
+        console.log(`Using fullName.charCodeAt(1) method is "${usingCharcodeAt}"`);
+        console.log(`Using fullName.charAt(0) method is "${usingCharAt}"`);
+        console.log(`Using fullName.at(1) method is "${usingAt}"`);
+        console.log(`Using firstName[2] method is "${usingArray}"`);
+        console.log(`Using fullName.slice(0,7) method is "${usingSlice}"`);
+        console.log(`Using fullName.substring(7, 15) method is "${usingSubstring}"`);
+        console.log(`Using fullName.substr(15, 16) method is "${usingSubstr}"`);
+        console.log(`Using fullName.toUpperCase() method is "${usingToUpperCase}"`);
+        console.log(`Using fullName.toLowerCase() method is "${usingToLowerCase}"`);
+        console.log(`Using firstName.concat("",lastName, middleName) method is "${usingConcat}"`);
+        console.log(`Using age.trim() method is "${usingTrim}"`);
+        console.log(`Using age.trimStart() method is "${usingTrimStart}"`);
+        console.log(`Using age.trimEnd() method is "${usingTrimEnd}"`);
+        console.log(`Using mobile.padStart(14, '+91 ') method is "${usingPadStart}"`);
+        console.log(`Using mobile.padEnd(14, ' +91') method is "${usingPadEnd}"`);
+        console.log(`Using number.toString() method is "${usingToString}"`);
+        console.log(`Using mobile.repeat(2) method is "${usingRepeat}"`);
+        console.log(`Using mobile.replace(9, 0) method is "${usingReplace}"`);
+        console.log(`Using mobile.replace(/9/i, 0) method is "${usingIgnoreInReplace}"`);
+        console.log(`Using mobile.replace(/9/g, 0) method is "${usingGlobalInReplace}"`);
+        console.log(`Using mobile.replace(/9/ig, 0) method is "${usingIgnoreAndGlobalInReplace}"`);
+        console.log(`Using replaceAll('My', 'my') method is "${usingReplaceAll}"`);
+        console.log(`Using fullName.split('F') method is "${usingSplit}"`);
+        
+
+        const str = "The rain in Spain stays mainly in the plain.";
+const result = str
+  .replace(/ain/g, "XYZ")    // Replaces all occurrences of 'ain' with 'XYZ'
+  .replace(/Spain/g, "France") // Replaces 'Spain' with 'France'
+  .toLowerCase();             // Converts the entire string to lowercase
+
+console.log(result); // Outputs: "the xyz in france stays mxyzly in the plxyz."
+
+    </script>
+</body>
+</html>
