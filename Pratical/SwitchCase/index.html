@@ -7,35 +7,26 @@
   </head>
   <body>
     <script>
-      var userPlace = parseInt(
-        prompt("Enter value from 0 to 4 to find your place")
-      );
-      var place = [
-        "tuticorin",
-        "tirunelveli",
-        "madurai",
-        "dindugal",
-        "chennai",
-      ];
+      var userPlace = parseInt(prompt("Enter pincode to find the place"));
 
       switch (userPlace) {
-        case 0:
+        case 628001:
           console.log("Tuticorin");
           break;
-        case 1:
+        case 627001:
           console.log("Tirunelveli");
           break;
-        case 2:
+        case 625001:
           console.log("Madurai");
           break;
-        case 3:
+        case 624001:
           console.log("Dindugal");
           break;
-        case 4:
+        case 600001:
           console.log("Chennai");
           break;
         default:
-          console.log("Invalid value Enter value from 0 to 4");
+          console.log("Invalid pincode");
           break;
       }
     </script>
