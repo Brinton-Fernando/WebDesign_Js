@@ -7,12 +7,20 @@
   </head>
   <body>
     <script>
-      var x = 1;
+      var sum = 0;
 
       do {
-        console.log(x);
-        x++;
-      } while (x <= 10);
+        var x = parseInt(prompt("Enter X value"));
+        var y = parseInt(prompt("Enter Y value"));
+
+        sum = sum + x + y;
+
+        console.log(sum);
+
+        var choose = prompt(
+          "Enter yes to see the result or Enter no to add more"
+        );
+      } while (choose === "no");
     </script>
   </body>
 </html>
