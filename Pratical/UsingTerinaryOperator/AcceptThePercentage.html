@@ -1,0 +1,37 @@
+<!-- Accept the percentage from the user and display the grade according to the following criteria
+Below 25 - D
+25 to 45 - C
+45 to 50 - B
+50 to 60 - B+
+60 to 80 - A
+Above 80 - A+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var value = parseInt(prompt('Enter your percentage'));
+        var percentage = (value/100) * 100;
+
+        var grade = percentage <= 25 ? `${percentage}% Your grade is D` 
+        : percentage > 25 && percentage <= 45 
+        ? `${percentage}% Your grade is C` 
+        : percentage > 45 && percentage <= 50 
+        ? `${percentage}% Your grade is B` 
+        : percentage > 50 && percentage <= 60 
+        ? `${percentage}% Your grade is B+` 
+        : percentage > 60 && percentage <= 80 
+        ? `${percentage}% Your grade is A` 
+        : percentage > 80 && percentage <= 100 
+        ? `${percentage}% Your grade is A+` 
+        : 'Enter correct percentage';
+
+        document.write(grade);
+    </script>
+</body>
+</html>

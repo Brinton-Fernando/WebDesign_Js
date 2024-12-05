@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var text = "";
+      var experience = 0;
+      var age = 0;
+
+      for (var i = 0; i <= 1; i++) {
+        var name = prompt("Enter your name");
+        age = parseInt(prompt("Enter your age"));
+        experience = parseInt(prompt("Enter your years of experience"));
+
+        text +=
+          "Name: " +
+          name +
+          "<br>" +
+          "Age: " +
+          age +
+          "<br>" +
+          "Experience: " +
+          experience +
+          " years<br><br>";
+      }
+
+      console.log(text);
+    </script>
+  </body>
+</html>

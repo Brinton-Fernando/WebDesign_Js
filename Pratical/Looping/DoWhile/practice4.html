@@ -1,0 +1,29 @@
+<!-- 1/2 + 2/3 + 3/4 + 4/5 + 5/6 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var sum = 0;
+      var i = 1;
+
+      do {
+        sum = sum + i / (i + 1);
+        i++;
+      } while (i <= 5);
+      console.log(sum);
+    </script>
+  </body>
+</html>
+
+<!-- result = 
+ 0.5
+ 1.1666666666666665
+ 1.9166666666666665
+ 2.716666666666667
+ 3.5500000000000003 -->

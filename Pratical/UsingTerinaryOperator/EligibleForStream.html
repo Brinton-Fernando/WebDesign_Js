@@ -1,0 +1,46 @@
+<!-- Accept the mark of English, Math, science and Social studies subject and display the stream alloted according to following
+all subject more than 80 marks  - science stream
+English > 80 and Math, Science above 50 - commerce stream
+English > 80 and Social studies > 80 - commerce stream -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var english = parseInt(prompt("Enter your English mark"));
+      var maths = parseInt(prompt("Enter your Maths mark"));
+      var science = parseInt(prompt("Enter your Science mark"));
+      var social = parseInt(prompt("Enter your Social mark"));
+
+      var stream =
+        english > 80 &&
+        english <= 100 &&
+        maths > 80 &&
+        maths <= 100 &&
+        science > 80 &&
+        science <= 100 &&
+        social > 80 &&
+        social <= 100
+          ? `As per mark you are eligible for Science stream`
+          : english > 80 &&
+            english <= 100 &&
+            maths > 50 &&
+            maths <= 80 &&
+            science > 50 &&
+            science <= 80
+          ? `As per mark you are eligible for Commerce stream`
+          : english > 80 && english <= 100 && social > 80 && social <= 100
+          ? `As per mark you are eligible for Commerce stream`
+          : english < 80 && maths < 80 && science < 80 && social < 80
+          ? `You are not eligible for stream`
+          : "Enter valid mark";
+
+      document.write(stream);
+    </script>
+  </body>
+</html>

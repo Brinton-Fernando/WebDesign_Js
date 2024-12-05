@@ -1,0 +1,37 @@
+<!-- Accept the electric units from user and calculate the bill according to the following rates -->
+<!-- first 100 units - free -->
+<!-- next 200 units - Rs.2 per day -->
+<!-- Above 300 units - Rs.5 per day -->
+<!-- if number of unit is 500 then total bill = 0 + 400 + 1000 = 1400 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var unit = parseInt(prompt("Enter total number of unit"));
+
+      var first100Units = unit <= 100;
+      var next200Units = 0 + (unit - 100) * 2;
+      var next300Units = 400 + (unit - 300) * 5;
+      var last500Units = 0 + 400 + 1000;
+
+      var amount =
+        unit <= 100
+          ? `Your amount should be paid for ${unit} units is Rs.0`
+          : unit > 100 && unit <= 300
+          ? `Your amount should be paid for ${unit} units is Rs.${next200Units}`
+          : unit > 300 && unit < 500
+          ? `Your amount should be paid for ${unit} units is Rs.${next300Units}`
+          : unit === 500
+          ? `Your amount should be paid for ${unit} units is Rs.${last500Units}`
+          : "Enter unit below 500";
+
+      document.write(amount);
+    </script>
+  </body>
+</html>

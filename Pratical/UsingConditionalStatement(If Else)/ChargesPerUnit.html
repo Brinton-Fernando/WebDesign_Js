@@ -1,0 +1,32 @@
+<!-- Write  a program to calculate the electricity bill (accept number of units from user) according to the following criteria -->
+<!-- First 100 units - no charge -->
+<!-- Next 100 units - Rs.5 per unit -->
+<!-- After 100 units - Rs.10 per unit -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var units = parseInt(prompt("Enter an units"));
+
+      if (units <= 100) {
+        document.write(`No charge for ${units}`);
+      } else if (units > 100 && units <= 200) {
+        var bill = 0 + (units - 100) * 5;
+        document.write(
+          `After 100 units (Rs.5 per unit) - Total ${units} units used and Amount to pay: ${bill}`
+        );
+      } else if (units > 200) {
+        var bill = 500 + (units - 200) * 10;
+        document.write(
+          `After 200 units (Rs.10 per unit) - Total ${units} units used and Amount to pay: ${bill}`
+        );
+      }
+    </script>
+  </body>
+</html>

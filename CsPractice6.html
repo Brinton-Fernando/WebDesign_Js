@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var grade = parseInt(prompt("Enter the grade"));
+
+      if (grade < 25) {
+        document.write(`Your grade is F - ${grade}`);
+      } else if (grade >= 25 && grade <= 45) {
+        document.write(`Your grade is E - ${grade}`);
+      } else if (grade > 45 && grade <= 50) {
+        document.write(`Your grade is D - ${grade}`);
+      } else if (grade > 50 && grade <= 60) {
+        document.write(`Your grade is C - ${grade}`);
+      } else if (grade > 60 && grade <= 80) {
+        document.write(`Your grade is B - ${grade}`);
+      } else if (grade > 80 && grade <= 100) {
+        document.write(`Your grade is A - ${grade}`);
+      } else {
+        document.write(`Give your proper Grade`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!-- Accept the kilometers covered and calculate the bill according to the following criteria
+first 10km = Rs.11/km
+next 90km = Rs.10/km
+after that Rs.9/km -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var kilometer = parseInt(prompt("Enter your kilometer"));
+
+      var first10Kilometer = kilometer * 11;
+      var next90Kilometer = 110 + (kilometer - 10) * 10;
+      var above90kilometer = 1010 + (kilometer - 100) * 9;
+
+      var amount =
+        kilometer <= 10
+          ? `Amount should be paid for the ${kilometer} is ${first10Kilometer}`
+          : kilometer > 10 && kilometer <= 100
+          ? `Amount should be paid for the ${kilometer} is ${next90Kilometer}`
+          : kilometer > 100
+          ? `Amount should be paid for the ${kilometer} is ${above90kilometer}`
+          : "Undefined";
+
+      document.write(amount);
+    </script>
+  </body>
+</html>

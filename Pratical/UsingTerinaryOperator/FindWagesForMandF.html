@@ -1,0 +1,45 @@
+<!-- Accept the age, sex ('M', 'F' ), number of days and display the wages accordingly -->
+<!-- 
+>=18 and <30 
+ M  700
+ F 750 
+ -->
+<!-- 
+>=30 and <=40 
+ M  800
+ F 850 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var gender = prompt("Enter your gender 'M' or 'F'");
+      var age = parseInt(prompt("Enter your age"));
+      var noOfDays = parseInt(prompt("No of days"));
+
+      var maleSalaryBelow30 = 700 * noOfDays;
+      var femaleSalaryBelow30 = 750 * noOfDays;
+      var maleSalaryAbove30 = 800 * noOfDays;
+      var femaleSalaryAbove30 = 850 * noOfDays;
+
+      var salary =
+        age >= 18 && age < 30 && gender === "M"
+          ? `Your Salary is ${maleSalaryBelow30}`
+          : age >= 18 && age < 30 && gender === "F"
+          ? `Your Salary is ${femaleSalaryBelow30}`
+          : age >= 30 && age <= 40 && gender === "M"
+          ? `Your Salary is ${maleSalaryAbove30}`
+          : age >= 30 && age <= 40 && gender === "F"
+          ? `Your Salary is ${femaleSalaryAbove30}`
+          : "Enter proper value";
+
+      document.write(salary);
+    </script>
+  </body>
+</html>

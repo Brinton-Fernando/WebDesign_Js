@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var user1 = parseInt(prompt("Enter user1 value"));
+      var user2 = parseInt(prompt("Enter user2 value"));
+      var user3 = parseInt(prompt("Enter user3 value"));
+
+      if (user1 > user2 && user1 > user3) {
+        document.write(`The greatest number is user1 ${user1}`);
+      } else if (user2 > user1 && user2 > user3) {
+        document.write(`The greatest number is user2 ${user2}`);
+      } else if (user3 > user1 && user3 > user2) {
+        document.write(`The greatest number is user3 ${user3}`);
+      }
+    </script>
+  </body>
+</html>
