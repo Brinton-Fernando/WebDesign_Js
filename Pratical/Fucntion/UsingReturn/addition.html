@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function addNumber(a, b) {
+        var addedNumber = a + b;
+
+        return addedNumber;
+      }
+
+      function finalResult() {
+        var x = parseInt(prompt("Enter X value"));
+        var y = parseInt(prompt("Enter Y value"));
+
+        var result = addNumber(x, y);
+
+        document.write(result);
+      }
+    </script>
+
+    <div
+      style="
+        display: flex;
+        width: 100px;
+        background-color: black;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        cursor: pointer;
+      "
+      onclick="finalResult()"
+    >
+      Click Me
+    </div>
+  </body>
+</html>
